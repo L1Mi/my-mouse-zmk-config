@@ -1,0 +1,6 @@
+config SHIELD_MY_MOUSE
+    bool "My Mouse"
+    select SPI
+    select NRF_SPI_QDMA
+    select PS2_Trackpad
+    default y

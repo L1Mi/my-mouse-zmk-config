@@ -1,0 +1,17 @@
+/*
+ * My Mouse shield for Seeeduino XIAO BLE
+ */
+
+/ {
+    chosen {
+        zmk,matrix-transform = &input_matrix;
+    };
+
+    input_matrix: matrix_input {
+        compatible = "zmk,matrix-map";
+        rows = <1>;
+        cols = <2>;
+        row-gpios = <&gpiote 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        col-gpios = <&gpiote 1 GPIO_ACTIVE_HIGH>;
+    };
+};
